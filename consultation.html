@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز استشارة مجانية</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #144266 0%, #144266 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #144266;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #144266 0%, #144266 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .success-message {
+            display: none;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .error-message {
+            display: none;
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .home-btn{display:inline-block;margin-bottom:14px;padding:8px 12px;border-radius:6px;text-decoration:none;background:#ffD700;color:#000;font-weight:700}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a class="home-btn" href="index.html">العودة للصفحة الرئيسية</a>
+        <h1>حجز استشارة مجانية</h1>
+        <p class="subtitle">احجز استشارة مجانية من خلال الآتي</p>
+        
+        <div class="success-message" id="successMessage">
+            تم إرسال استشارتك بنجاح! سنتواصل معك قريباً.
+        </div>
+        
+        <div class="error-message" id="errorMessage">
+            حدث خطأ في الإرسال. يرجى المحاولة مرة أخرى.
+        </div>
+        
+        <form id="consultationForm">
+            <div class="form-group">
+                <label for="subject">عنوان الموضوع</label>
+                <input type="text" id="subject" name="subject" required placeholder="أدخل عنوان الموضوع">
+            </div>
+            
+            <div class="form-group">
+                <label for="name">اسمك</label>
+                <input type="text" id="name" name="name" required placeholder="أدخل اسمك">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">ايميلك</label>
+                <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني">
+            </div>
+            
+            <div class="form-group">
+                <label for="whatsapp">رقمك واتساب</label>
+                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="أدخل رقم واتساب">
+            </div>
+            
+            <div class="form-group">
+                <label for="telegram">معرفك تيليجرام</label>
+                <input type="text" id="telegram" name="telegram" required placeholder="أدخل معرفك في تيليجرام">
+            </div>
+            
+            <div class="form-group">
+                <label for="message">شرح الموضوع</label>
+                <textarea id="message" name="message" required placeholder="اشرح موضوع استشارتك بالتفصيل"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">إرسال</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // جمع البيانات من النموذج
+            const formData = {
+                subject: document.getElementById('subject').value,
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                telegram: document.getElementById('telegram').value,
+                message: document.getElementById('message').value
+            };
+            
+            // إرسال البيانات إلى خادم معالجة البريد الإلكتروني
+            sendConsultationEmail(formData);
+        });
+        
+        function sendConsultationEmail(formData) {
+            // إرسال البيانات إلى الخادم الخاص بنا
+            fetch('http://localhost:3000/api/consultation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showSuccessMessage();
+                    document.getElementById('consultationForm').reset();
+                } else {
+                    console.error('Error:', data.message);
+                    if (data.errors && data.errors.length > 0) {
+                        alert('أخطاء:\n' + data.errors.join('\n'));
+                    } else {
+                        alert('خطأ: ' + data.message);
+                    }
+                    showErrorMessage();
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('خطأ في الاتصال بالخادم. تأكد من أن الخادم يعمل على http://localhost:3000');
+                showErrorMessage();
+            });
+        }
+        
+        function showSuccessMessage() {
+            const successMsg = document.getElementById('successMessage');
+            successMsg.style.display = 'block';
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+        }
+        
+        function showErrorMessage() {
+            const errorMsg = document.getElementById('errorMessage');
+            errorMsg.style.display = 'block';
+            setTimeout(() => {
+                errorMsg.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

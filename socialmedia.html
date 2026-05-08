@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hussein AboZodah">
+    <meta name="keywords" content="Graphic Designer, Programmer, Content Writer, CV Writer, Computer Technology Engineer">
+    <meta name="description" content="Hi my name is Hussein AboZodah, This is my official website.">
+    <title>ENG Hussein AboZodah</title>
+
+<style>
+    /* 1. إعدادات الصفحة العامة والخلفية */
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #144266; /* الخلفية الزرقاء الداكنة لتوضيح النيون */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+    }
+
+    /* 2. حاوية التوسط */
+    .container {
+        display: flex;
+        flex-direction: column; /* ترتيب العناصر فوق بعض (عمودي) */
+        justify-content: center; 
+        align-items: center;    
+        min-height: 100vh;      
+        padding: 20px;
+    }
+
+    /* 3. تنسيق الصورة */
+    .Myimg {
+        width: 250px;  /* تمت إضافة px */
+        height: 250px; /* تمت إضافة px */
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        
+        /* تأثير النيون الأزرق */
+        box-shadow: 
+            0 0 15px #0ff,        
+            0 0 30px #0ff,        
+            0 0 60px rgba(0, 255, 255, 0.5);
+
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 30px; /* مسافة بين الصورة والروابط */
+    }
+
+    .Myimg:hover {
+        transform: scale(1.05) rotate(5deg); /* إضافة دوران بسيط */
+        box-shadow: 
+            0 0 20px #0ff, 
+            0 0 40px #0ff, 
+            0 0 80px #0ff;
+    }
+
+    /* 4. تنسيق الروابط لتصبح أزراراً */
+    .links-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* مسافة بين كل زر والآخر */
+        width: 100%;
+        max-width: 300px; /* عرض القائمة */
+        text-align: center;
+    }
+
+    .social-btn {
+        text-decoration: none;
+        color: #144266;
+        background-color: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: 0.3s;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .social-btn:hover {
+        background-color: #0ff; /* تغيير اللون عند المرور */
+        transform: translateY(-3px); /* رفعة بسيطة للأعلى */
+        box-shadow: 0 0 15px #0ff;
+    }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <img class="Myimg" src="p.jpg" alt="Hussein AboZodah">
+
+    <div class="links-container">
+        <a class="social-btn" href="https://wa.me/message/EKTGPWL3T57XE1" target="_blank">Whatsapp</a>
+        <a class="social-btn" href="https://t.me/hussen_designer" target="_blank">Telegram</a>
+        <a class="social-btn" href="https://www.instagram.com/hussen_designer/" target="_blank">Instagram</a>
+        <a class="social-btn" href="https://t.me/AboZodah_Platform5" target="_blank">AboZodah Education Platform</a>
+        <br>
+        <a class="social-btn" style="background: #ffD700; color: #000;" href="index.html">العودة للصفحة الرئيسية</a>
+    </div>
+</div>
+
+</body>
+</html>
+

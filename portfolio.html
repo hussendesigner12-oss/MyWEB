@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>معرض أعمال حسين أبوزودة</title>
+  <style>
+    :root{--accent:#144266;--bg:#144266}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);margin:0;padding:0;color:#111}
+    header{background:#fff;border-bottom:1px solid #e6e9ef;padding:24px 16px;text-align:center}
+    h1{margin:0;font-size:24px;color:var(--accent)}
+    .social-btn{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:6px;text-decoration:none;font-weight:700}
+    .pdf-btn{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:6px;text-decoration:none;background:#0b5ed7;color:#fff;font-weight:700;font-size:14px}
+    .pdf-btn:hover{opacity:0.95}
+    .container{max-width:1100px;margin:28px auto;padding:0 16px}
+    .intro{margin:12px 0 24px;text-align:center;color:#eaf6ff}
+    nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:18px}
+    nav a{background:#fff;border:1px solid #e6e9ef;padding:8px 12px;border-radius:6px;color:#144266;text-decoration:none;font-size:14px}
+    nav a.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .hidden{display:none !important}
+    section{margin:18px 0}
+    section h2{margin:0 0 12px;font-size:20px;color:#144266}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+    .card{background:#fff;border:1px solid #e6e9ef;padding:14px;border-radius:8px;min-height:120px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+    .card .title{display:none}
+    .placeholder{width:100%;height:70px;background:linear-gradient(90deg,#e9eef8,#f6f9ff);border-radius:6px;margin-bottom:8px}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:6px;margin-bottom:8px;display:block}
+    footer{padding:18px;text-align:center;color:#cfe8ff;font-size:14px}
+    @media (max-width:480px){h1{font-size:20px}}
+    /* Lightbox styles */
+    .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.8);z-index:9999;padding:20px}
+    .lightbox.show{display:flex}
+    .lightbox-content{max-width:1100px;width:100%;max-height:90vh;display:flex;flex-direction:column;align-items:center}
+    .lightbox img{max-width:100%;max-height:80vh;object-fit:contain;border-radius:6px}
+    .lightbox-caption{color:#fff;margin-top:10px;font-size:16px;display:none}
+    .lightbox-close{position:absolute;top:18px;left:18px;background:#ffD700;color:#000;border:none;padding:8px 12px;border-radius:6px;font-weight:700;cursor:pointer}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>معرض أعمال حسين أبوزودة</h1>
+    <a class="social-btn" style="background: #ffD700; color: #000;" href="index.html">العودة للصفحة الرئيسية</a>
+  </header>
+
+  <main class="container">
+    <p class="intro">مرحبًا بكم في صفحة عرض الأعمال — اختر القسم لمشاهدة نماذج الأعمال.</p>
+
+    <nav aria-label="روابط الأقسام">
+      <a href="#all" id="show-all">عرض الكل</a>
+      <a href="#posters" class="cat-link">بوسترات</a>
+      <a href="#logos" class="cat-link">شعارات</a>
+      <a href="#branding" class="cat-link">هويات بصرية</a>
+      <a href="#cards" class="cat-link">بطاقات</a>
+      <a href="#resumes" class="cat-link">سيرات ذاتية</a>
+      <a href="#certs" class="cat-link">شهادات</a>
+      <a href="#presentations" class="cat-link">عروض تقديمية</a>
+      <a href="#others" class="cat-link">أعمال أخرى</a>
+    </nav>
+
+    <section id="posters">
+      <h2>بوسترات إعلانية</h2>
+      <div class="grid">
+        <div class="card"><img src="images/posters/Artboard 2-100.jpg" alt="Artboard 2-100" loading="lazy"><div class="title">Artboard 2-100</div></div>
+        <div class="card"><img src="images/posters/Future Land.jpg" alt="Future Land" loading="lazy"><div class="title">Future Land</div></div>
+        <div class="card"><img src="images/posters/IMG_20250910_221140_694.jpg" alt="IMG_20250910_221140_694" loading="lazy"><div class="title">IMG_20250910_221140_694</div></div>
+        <div class="card"><img src="images/posters/IMG_20250916_175347_143.jpg" alt="IMG_20250916_175347_143" loading="lazy"><div class="title">IMG_20250916_175347_143</div></div>
+        <div class="card"><img src="images/posters/IMG_20250916_211802_452.jpg" alt="IMG_20250916_211802_452" loading="lazy"><div class="title">IMG_20250916_211802_452</div></div>
+        <div class="card"><img src="images/posters/IMG_20250922_212136_732.jpg" alt="IMG_20250922_212136_732" loading="lazy"><div class="title">IMG_20250922_212136_732</div></div>
+        <div class="card"><img src="images/posters/IMG_20250922_231554_164.jpg" alt="IMG_20250922_231554_164" loading="lazy"><div class="title">IMG_20250922_231554_164</div></div>
+        <div class="card"><img src="images/posters/IMG_20250922_231752_777.jpg" alt="IMG_20250922_231752_777" loading="lazy"><div class="title">IMG_20250922_231752_777</div></div>
+        <div class="card"><img src="images/posters/Poster Beckenbauer.jpg" alt="Poster Beckenbauer" loading="lazy"><div class="title">Poster Beckenbauer</div></div>
+        <div class="card"><img src="images/posters/Untitled-1.jpg" alt="Untitled-1" loading="lazy"><div class="title">Untitled-1</div></div>
+        <div class="card"><img src="images/posters/ازهر.png" alt="ازهر" loading="lazy"><div class="title">ازهر</div></div>
+        <div class="card"><img src="images/posters/اعلان.jpg" alt="اعلان" loading="lazy"><div class="title">اعلان</div></div>
+        <div class="card"><img src="images/posters/اعلاني-100.jpg" alt="اعلاني-100" loading="lazy"><div class="title">اعلاني-100</div></div>
+        <div class="card"><img src="images/posters/العام الجديد.png" alt="العام الجديد" loading="lazy"><div class="title">العام الجديد</div></div>
+        <div class="card"><img src="images/posters/رمضان2024.png" alt="رمضان2024" loading="lazy"><div class="title">رمضان2024</div></div>
+        <div class="card"><img src="images/posters/عيد الاضحى.jpg" alt="عيد الاضحى" loading="lazy"><div class="title">عيد الاضحى</div></div>
+        <div class="card"><img src="images/posters/عيد2024.png" alt="عيد2024" loading="lazy"><div class="title">عيد2024</div></div>
+        <div class="card"><img src="images/posters/مصطفى حيدر3.jpg" alt="مصطفى حيدر3" loading="lazy"><div class="title">مصطفى حيدر3</div></div>
+      </div>
+    </section>
+
+    <section id="logos">
+      <h2>شعارات تجارية</h2>
+      <div class="grid">
+        <div class="card"><img src="images/logos/1.jpg" alt="1" loading="lazy"><div class="title">1</div></div>
+        <div class="card"><img src="images/logos/2.jpg" alt="2" loading="lazy"><div class="title">2</div></div>
+        <div class="card"><img src="images/logos/3D Glass Logo Mockup Free Download.jpg" alt="3D Glass Logo Mockup" loading="lazy"><div class="title">3D Glass Logo Mockup</div></div>
+        <div class="card"><img src="images/logos/ALMA Logo.jpg" alt="ALMA Logo" loading="lazy"><div class="title">ALMA Logo</div></div>
+        <div class="card"><img src="images/logos/Black Wall Logo Design Mockup.jpg" alt="Black Wall Logo" loading="lazy"><div class="title">Black Wall Logo</div></div>
+        <div class="card"><img src="images/logos/Hoodie logo eng.jpg" alt="Hoodie logo eng" loading="lazy"><div class="title">Hoodie logo eng</div></div>
+        <div class="card"><img src="images/logos/Hoodie logo eng2.jpg" alt="Hoodie logo eng2" loading="lazy"><div class="title">Hoodie logo eng2</div></div>
+        <div class="card"><img src="images/logos/IMG_20250920_134625_957.jpg" alt="IMG_20250920_134625_957" loading="lazy"><div class="title">IMG_20250920_134625_957</div></div>
+        <div class="card"><img src="images/logos/IMG_20250922_234309_182.jpg" alt="IMG_20250922_234309_182" loading="lazy"><div class="title">IMG_20250922_234309_182</div></div>
+        <div class="card"><img src="images/logos/logo eng shop.jpg" alt="logo eng shop" loading="lazy"><div class="title">logo eng shop</div></div>
+        <div class="card"><img src="images/logos/Logo for computers company.jpg" alt="Logo for computers company" loading="lazy"><div class="title">Logo for computers company</div></div>
+        <div class="card"><img src="images/logos/logo1.jpg" alt="logo1" loading="lazy"><div class="title">logo1</div></div>
+        <div class="card"><img src="images/logos/logo2.jpg" alt="logo2" loading="lazy"><div class="title">logo2</div></div>
+        <div class="card"><img src="images/logos/Mockup logo5.jpg" alt="Mockup logo5" loading="lazy"><div class="title">Mockup logo5</div></div>
+        <div class="card"><img src="images/logos/White Logo Mockup on Black Textile - PHOTOPEA.jpg" alt="White Logo Mockup" loading="lazy"><div class="title">White Logo Mockup</div></div>
+        <div class="card"><img src="images/logos/بافيلون 1.jpg" alt="بافيلون 1" loading="lazy"><div class="title">بافيلون 1</div></div>
+        <div class="card"><img src="images/logos/بافيلون 2.jpg" alt="بافيلون 2" loading="lazy"><div class="title">بافيلون 2</div></div>
+        <div class="card"><img src="images/logos/تصميم لشركة سيارات.jpg" alt="تصميم لشركة سيارات" loading="lazy"><div class="title">تصميم لشركة سيارات</div></div>
+        <div class="card"><img src="images/logos/شعار التكسي.jpg" alt="شعار التكسي" loading="lazy"><div class="title">شعار التكسي</div></div>
+        <div class="card"><img src="images/logos/شعار المقولات.jpg" alt="شعار المقولات" loading="lazy"><div class="title">شعار المقولات</div></div>
+        <div class="card"><img src="images/logos/شعار تجريبي لمحل كان كرز للعطور.jpg" alt="شعار تجريبي" loading="lazy"><div class="title">شعار تجريبي</div></div>
+        <div class="card"><img src="images/logos/شعار حرف خليفة بالانجليزي.jpg" alt="شعار حرف خليفة" loading="lazy"><div class="title">شعار حرف خليفة</div></div>
+        <div class="card"><img src="images/logos/شعار رياضي لقسم هندسة تقنيات الحاسوب_page-0001.jpg" alt="شعار رياضي" loading="lazy"><div class="title">شعار رياضي</div></div>
+        <div class="card"><img src="images/logos/شعار طامي للمباريات.jpg" alt="شعار طامي" loading="lazy"><div class="title">شعار طامي</div></div>
+        <div class="card"><img src="images/logos/شعار كوزمتك.jpg" alt="شعار كوزمتك" loading="lazy"><div class="title">شعار كوزمتك</div></div>
+        <div class="card"><img src="images/logos/شعار مصطفى حيدر.jpg" alt="شعار مصطفى حيدر" loading="lazy"><div class="title">شعار مصطفى حيدر</div></div>
+        <div class="card"><img src="images/logos/شعار مطعم الطارق.jpg" alt="شعار مطعم الطارق" loading="lazy"><div class="title">شعار مطعم الطارق</div></div>
+        <div class="card"><img src="images/logos/شعاري.jpg" alt="شعاري" loading="lazy"><div class="title">شعاري</div></div>
+        <div class="card"><img src="images/logos/شعاري2.jpg" alt="شعاري2" loading="lazy"><div class="title">شعاري2</div></div>
+        <div class="card"><img src="images/logos/شعاري3.jpg" alt="شعاري3" loading="lazy"><div class="title">شعاري3</div></div>
+      </div>
+    </section>
+
+    <section id="branding">
+      <h2>هويات بصرية</h2>
+      <div class="grid">
+        <div class="card"><img src="images/identities/4.png" alt="هوية بصرية" loading="lazy"><div class="title">هوية بصرية</div></div>
+      </div>
+    </section>
+
+    <section id="cards">
+      <h2>بطاقات عمل وشخصية</h2>
+      <div class="grid">
+        <div class="card"><img src="images/cards/امامية البطاقة1.jpg" alt="امامية البطاقة1" loading="lazy"><div class="title">امامية البطاقة1</div></div>
+        <div class="card"><img src="images/cards/امامية البطاقة2.jpg" alt="امامية البطاقة2" loading="lazy"><div class="title">امامية البطاقة2</div></div>
+        <div class="card"><img src="images/cards/بطاقة3.jpg" alt="بطاقة3" loading="lazy"><div class="title">بطاقة3</div></div>
+        <div class="card"><img src="images/cards/حسن حيدر حاكم.jpg" alt="حسن حيدر حاكم" loading="lazy"><div class="title">حسن حيدر حاكم</div></div>
+      </div>
+    </section>
+
+    <section id="resumes">
+      <h2>سيراتي ذاتية</h2>
+      <div class="grid">
+        <div class="card"><img src="images/resumes/resume1.jpg" alt="السيرة 1" loading="lazy"><div class="title">السيرة 1</div><div>تصميم احترافي</div></div>
+      </div>
+    </section>
+
+    <section id="certs">
+      <h2>شهادات</h2>
+      <div class="grid">
+        <div class="card"><img src="images/certificates/IMG_20250922_212115_893.jpg" alt="شهادة" loading="lazy"><div class="title">شهادة</div></div>
+        <div class="card"><img src="images/certificates/شهادة1.jpg" alt="شهادة1" loading="lazy"><div class="title">شهادة1</div></div>
+        <div class="card"><img src="images/certificates/شهادة2.jpg" alt="شهادة2" loading="lazy"><div class="title">شهادة2</div></div>
+        <div class="card"><img src="images/certificates/شهادة3.jpg" alt="شهادة3" loading="lazy"><div class="title">شهادة3</div></div>
+      </div>
+    </section>
+
+
+
+    <section id="presentations">
+      <h2>عروض تقديمية</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="images/powerpoint/1.JPG" alt="presentation 1" loading="lazy">
+        </div>
+        <div class="card">
+          <img src="images/powerpoint/2.JPG" alt="presentation 2" loading="lazy">
+        </div>
+        <div class="card">
+          <img src="images/powerpoint/3.JPG" alt="presentation 3" loading="lazy">
+        </div>
+        <div class="card">
+          <img src="images/powerpoint/4.JPG" alt="presentation 4" loading="lazy">
+        </div>
+        <div class="card">
+          <img src="images/powerpoint/5.JPG" alt="presentation 5" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="others">
+      <h2>أعمال أخرى</h2>
+      <div class="grid">
+        <div class="card"><img src="images/others/1.jpg" alt="1" loading="lazy"></div>
+        <div class="card"><img src="images/others/Untitled-1.jpg" alt="Untitled-1" loading="lazy"></div>
+        <div class="card"><img src="images/others/شعاري كيس بلاستيكي.jpg" alt="شعاري كيس بلاستيكي" loading="lazy"></div>
+        <div class="card"><img src="images/others/شعاري كيس ورقي2.jpg" alt="شعاري كيس ورقي2" loading="lazy"></div>
+        <div class="card"><img src="images/others/علبة دواء2.png" alt="علبة دواء2" loading="lazy"></div>
+        <div class="card"><img src="images/others/غلاف شركة ارض المستقبل_page-0001.jpg" alt="غلاف شركة ارض المستقبل" loading="lazy"></div>
+        <div class="card"><img src="images/others/فاتورة من تصميمي1_page-0001.jpg" alt="فاتورة من تصميمي" loading="lazy"></div>
+        <div class="card"><img src="images/others/منيو طعام.jpg" alt="منيو طعام" loading="lazy"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightboxClose" class="lightbox-close">إغلاق</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="عرض الصورة">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const links = document.querySelectorAll('nav a');
+      const sections = document.querySelectorAll('main section');
+      function showAll(){
+        sections.forEach(s=>s.classList.remove('hidden'));
+        setActive(null);
+      }
+      function showTarget(id){
+        sections.forEach(s=>{ if(s.id===id) s.classList.remove('hidden'); else s.classList.add('hidden'); });
+        setActive(id);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth'});
+      }
+      function setActive(id){
+        links.forEach(a=>{
+          const href = a.getAttribute('href').replace('#','');
+          if(id && href===id) a.classList.add('active'); else a.classList.remove('active');
+          if(!id && href==='all') a.classList.add('active');
+        });
+      }
+      links.forEach(link=>{
+        link.addEventListener('click', function(e){
+          const href = link.getAttribute('href');
+          if(!href) return;
+          e.preventDefault();
+          if(href === '#all') showAll(); else showTarget(href.replace('#',''));
+        });
+      });
+      // initial state: show all
+      showAll();
+
+      // Lightbox functionality
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxCaption = document.getElementById('lightboxCaption');
+      const lightboxClose = document.getElementById('lightboxClose');
+
+      function openLightbox(src, caption){
+        lightboxImg.src = src;
+        lightboxImg.alt = caption || 'الصورة';
+        lightboxCaption.textContent = caption || '';
+        lightbox.classList.add('show');
+        lightbox.setAttribute('aria-hidden','false');
+      }
+      function closeLightbox(){
+        lightbox.classList.remove('show');
+        lightbox.setAttribute('aria-hidden','true');
+        lightboxImg.src = '';
+        lightboxCaption.textContent = '';
+      }
+
+      // attach click to all card images
+      document.querySelectorAll('.card img').forEach(img=>{
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function(e){
+          openLightbox(img.src, '');
+        });
+      });
+
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function(e){ if(e.target===lightbox) closeLightbox(); });
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLightbox(); });
+    })();
+  </script>
+
+  <footer>
+    © حقوق النشر — معرض أعمال حسين أبوزودة
+  </footer>
+</body>
+</html>
+
+
