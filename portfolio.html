@@ -251,11 +251,16 @@
         lightboxCaption.textContent = '';
       }
 
-      // attach click to all card images
+      // ensure image src paths are URL-encoded (spaces / non-ascii) and attach click
       document.querySelectorAll('.card img').forEach(img=>{
+        const raw = img.getAttribute('src');
+        if(raw){
+          const encoded = encodeURI(raw);
+          if(raw !== encoded) img.setAttribute('src', encoded);
+        }
         img.style.cursor = 'zoom-in';
         img.addEventListener('click', function(e){
-          openLightbox(img.src, '');
+          openLightbox(img.getAttribute('src') || img.src, '');
         });
       });
 
