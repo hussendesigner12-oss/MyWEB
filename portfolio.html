@@ -37,6 +37,20 @@
   </style>
 </head>
 <body>
+  <script>
+    // Retry failed image loads using an encoded URL (handles spaces and non-ASCII)
+    document.addEventListener('error', function(e){
+      var t = e.target;
+      if(!t || t.tagName !== 'IMG') return;
+      if(t.dataset.retry) return;
+      t.dataset.retry = '1';
+      var raw = t.getAttribute('src') || t.src || '';
+      try{
+        var encoded = encodeURI(raw);
+        if(raw !== encoded) t.src = encoded;
+      }catch(err){ /* ignore */ }
+    }, true);
+  </script>
   <header>
     <h1>معرض أعمال حسين أبوزودة</h1>
     <a class="social-btn" style="background: #ffD700; color: #000;" href="index.html">العودة للصفحة الرئيسية</a>
