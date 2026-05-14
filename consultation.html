@@ -173,6 +173,7 @@
         </form>
     </div>
     
+    <script src="api_config.js"></script>
     <script>
         document.getElementById('consultationForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -191,8 +192,15 @@
         });
         
         function sendConsultationEmail(formData) {
+            // جهّز رابط الـ API من ملف config
+            const apiBase = (typeof API_URL !== 'undefined' && API_URL && API_URL !== 'REPLACE_WITH_BACKEND_URL') ? API_URL : null;
+            if (!apiBase) {
+                alert('لم يتم تكوين رابط الخادم. افتح ملف api_config.js وضع عنوان خادم الـ API.');
+                return;
+            }
+
             // إرسال البيانات إلى الخادم الخاص بنا
-            fetch('http://localhost:3000/api/consultation', {
+            fetch(apiBase + '/api/consultation', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
